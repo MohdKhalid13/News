@@ -13,7 +13,7 @@ export default function Navbar(props) {
   return (
     <div>
 
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className={`navbar navbar-expand-lg bg-light navbar-${props.mode} bg-${props.mode}`}>
         <div className="container-fluid">
           <a className="navbar-brand my-2" href="#"><BsNewspaper/> My News</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,6 +29,10 @@ export default function Navbar(props) {
               <li className="nav-item"><NavLink to="/Science" className="nav-link">Science</NavLink></li>
               <li className="nav-item"><NavLink to="/Technology" className="nav-link">Technology</NavLink></li>
             </ul>
+            <div className={`form-check form-switch me-5 ms-5 mt-1 text-${props.mode === 'dark' ? 'light' : 'dark'}`} id="form">
+              <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckChecked"/>
+              <label className="form-check-label" id="name" htmlFor="flexSwitchCheckChecked">{`${props.mode === 'dark' ? 'Enable LightMode' : 'Enable DarkMode'}`}</label>
+            </div> 
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" id='search' placeholder="Search" autoComplete='off'  aria-label="Search" />
               <button className="btn btn-outline-success" onClick={Search}  type="submit">Search</button>

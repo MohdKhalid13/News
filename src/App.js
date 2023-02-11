@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import News from './components/News';
 import './App.css'
 import Navbar from './components/Navbar';
@@ -12,19 +12,31 @@ import Technology from './components/Technology';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
+
+  const [mode,setmode] = useState("dark")
+
+  const toggleMode = () => {
+    if(mode == "dark"){
+      setmode("light")
+      document.body.style.backgroundColor = "black";
+    }else{
+      setmode("dark")
+      document.body.style.backgroundColor = "white"
+    }
+  }
  
   return (
     <>
 
-      <Navbar />
+      <Navbar mode={mode} toggleMode={toggleMode} />
       <Routes>
-        <Route path='/' element={<News />}></Route>
-        <Route path='/Business' element={<Business />}></Route>
-        <Route path='/Entertainment' element={<Entertainment />}></Route>
-        <Route path='/Health' element={<Health />}></Route>
-        <Route path='/Sports' element={<Sports />}></Route>
-        <Route path='/Science' element={<Science />}></Route>
-        <Route path='/Technology' element={<Technology />}></Route>
+        <Route path='/' element={<News mode={mode} />}></Route>
+        <Route path='/Business' element={<Business mode={mode}  />}></Route>
+        <Route path='/Entertainment' element={<Entertainment mode={mode}  />}></Route>
+        <Route path='/Health' element={<Health mode={mode}  />}></Route>
+        <Route path='/Sports' element={<Sports mode={mode}  />}></Route>
+        <Route path='/Science' element={<Science mode={mode}  />}></Route>
+        <Route path='/Technology' element={<Technology mode={mode}  />}></Route>
       </Routes>
 
 
