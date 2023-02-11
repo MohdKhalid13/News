@@ -21,7 +21,7 @@ function App() {
       document.body.style.backgroundColor = "black";
     }else{
       setmode("dark")
-      document.body.style.backgroundColor = "white"
+      .body.style.backgroundColor = "white"
     }
   }
  
