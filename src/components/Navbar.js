@@ -34,7 +34,7 @@ export default function Navbar(props) {
               <label className="form-check-label" id="name" htmlFor="flexSwitchCheckChecked">{`${props.mode === 'dark' ? 'Enable LightMode' : 'Enable DarkMode'}`}</label>
             </div> 
             <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" id='search' placeholder="Search" autoComplete='off'  aria-label="Search" />
+              <input className="form-control me-2" type="search" id='search' style={{backgroundColor:"black"}} placeholder="Search" autoComplete='off'  aria-label="Search" />
               <button className="btn btn-outline-success" onClick={Search}  type="submit">Search</button>
             </form>
           </div>

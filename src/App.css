@@ -22,3 +22,21 @@
 .nav-link:hover{
   color: orangered;
 }
+
+#search{
+  color: aliceblue;
+}
+
+@media screen and (max-width:1000px){
+  li, .d-flex{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+  }
+  .form-switch ,.form-check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+}
