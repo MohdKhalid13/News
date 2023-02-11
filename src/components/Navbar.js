@@ -14,7 +14,6 @@ export default function Navbar(props) {
     <div>
 
       <nav className={`navbar navbar-expand-lg bg-light navbar-${props.mode} bg-${props.mode}`}>
-        <H1>hELLO</H1>
         <div className="container-fluid">
           <a className="navbar-brand my-2" href="#"><BsNewspaper/> My News</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

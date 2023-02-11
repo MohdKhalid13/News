@@ -19,9 +19,12 @@ function App() {
     if(mode == "dark"){
       setmode("light")
       document.body.style.backgroundColor = "black";
+      document.body.style.color = "white"
     }else{
       setmode("dark")
-      .body.style.backgroundColor = "white"
+      document.body.style.backgroundColor = "white"
+      document.body.style.color = "black"
+
     }
   }
  
